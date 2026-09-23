@@ -1,7 +1,7 @@
 {
   "id": "art-of-coaching",
   "name": "The Art of Coaching",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minAppVersion": "1.5.0",
   "description": "Ton compagnon de coaching au quotidien : journal, outils et exercices enrichis de séance en séance.",
   "author": "Antoine Logean",

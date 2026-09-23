@@ -59,7 +59,8 @@ export default class ArtOfCoachingPlugin extends Plugin {
         this.app,
         this.settings.libraryUrl,
         this.settings.rootFolder,
-        knownIds
+        knownIds,
+        this.settings.installCoachAgent
       );
       this.settings.library = index;
       await this.saveSettings();

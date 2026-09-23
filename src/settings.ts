@@ -6,6 +6,8 @@ export interface CoachingSettings {
   rootFolder: string;
   libraryUrl: string;
   syncOnStartup: boolean;
+  /** Installer CLAUDE.md + skills dans `.claude/` pour Claude Code. */
+  installCoachAgent: boolean;
   /** Dernier index synchronisé (cache local, sert aussi hors ligne). */
   library: LibraryIndex | null;
   /** Outils déjà ouverts par le client (pour le badge « Nouveau »). */
@@ -16,6 +18,7 @@ export const DEFAULT_SETTINGS: CoachingSettings = {
   rootFolder: "Coaching",
   libraryUrl: "https://raw.githubusercontent.com/alogean/c1-obsidian/main/library/index.json",
   syncOnStartup: true,
+  installCoachAgent: true,
   library: null,
   seenToolIds: [],
 };
@@ -48,6 +51,19 @@ export class CoachingSettingTab extends PluginSettingTab {
       .addToggle((toggle) =>
         toggle.setValue(this.plugin.settings.syncOnStartup).onChange(async (value) => {
           this.plugin.settings.syncOnStartup = value;
+          await this.plugin.saveSettings();
+        })
+      );
+
+    new Setting(containerEl)
+      .setName("Coach IA (Claude Code)")
+      .setDesc(
+        "Installe dans ce coffre les consignes et exercices de ton coach pour Claude Code " +
+          "(dossier caché .claude/). Nécessite ton propre abonnement Claude."
+      )
+      .addToggle((toggle) =>
+        toggle.setValue(this.plugin.settings.installCoachAgent).onChange(async (value) => {
+          this.plugin.settings.installCoachAgent = value;
           await this.plugin.saveSettings();
         })
       );
