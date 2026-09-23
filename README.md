@@ -21,3 +21,14 @@ npm run build    # build de production (main.js)
 ## Fonctionnalités
 
 - [x] v0.1 — Journal du jour (`Coaching/Journal/AAAA-MM-JJ.md`), dossier configurable
+- [x] v0.2 — Bibliothèque d'outils : panneau « Mes outils », synchro au démarrage, badge « Nouveau »
+
+## Enrichir la bibliothèque (pour le coach)
+
+La bibliothèque vit dans `library/` et est servie publiquement depuis `main`.
+
+1. Écris la fiche en Markdown dans `library/outils/<id>.md`.
+2. Ajoute une entrée dans `library/index.json` (`id` unique et stable, `title`, `category`, `summary`, `file`).
+3. Commit + push sur `main`. Les clients la reçoivent au prochain démarrage d'Obsidian (délai de cache GitHub : ~5 min).
+
+⚠️ Tout ce qui est dans `library/` est **public**. Aucune donnée client ici.

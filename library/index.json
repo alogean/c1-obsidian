@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "tools": [
+    {
+      "id": "grow",
+      "title": "GROW — clarifier un objectif",
+      "category": "Objectifs",
+      "summary": "4 questions pour passer d'une envie floue à une action concrète.",
+      "file": "outils/grow.md"
+    },
+    {
+      "id": "oskar",
+      "title": "OSKAR — avancer par petits pas",
+      "category": "Objectifs",
+      "summary": "Partir de ce qui marche déjà pour faire le prochain petit pas.",
+      "file": "outils/oskar.md"
+    },
+    {
+      "id": "dilts",
+      "title": "Pyramide de Dilts — les niveaux logiques",
+      "category": "Connaissance de soi",
+      "summary": "Situer une difficulté : environnement, comportement, capacités, valeurs, identité.",
+      "file": "outils/dilts.md"
+    }
+  ]
+}

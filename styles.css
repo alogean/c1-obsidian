@@ -1,1 +1,47 @@
 /* Styles du plugin The Art of Coaching */
+.aoc-tools-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--size-4-2);
+}
+
+.aoc-tools-category {
+  margin: var(--size-4-4) 0 var(--size-4-1);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: var(--font-ui-smaller);
+  letter-spacing: 0.05em;
+}
+
+.aoc-tool {
+  padding: var(--size-4-2);
+  border-radius: var(--radius-m);
+  cursor: pointer;
+}
+
+.aoc-tool:hover {
+  background: var(--background-modifier-hover);
+}
+
+.aoc-tool-title {
+  font-weight: var(--font-semibold);
+}
+
+.aoc-tool-summary {
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+}
+
+.aoc-tool-new {
+  margin-left: var(--size-4-2);
+  padding: 0 var(--size-4-1);
+  border-radius: var(--radius-s);
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-size: var(--font-ui-smaller);
+}
+
+.aoc-tools-empty {
+  color: var(--text-muted);
+}
